@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tài Khoản</title>
+    <link rel="stylesheet" href="../dangky.css">
+</head>
+
+<body>
+<div class="container">
+
+    <!-- ================= LEFT PANEL ================= -->
+    <div class="left-panel">
+        <img src="../picture/background.jpg" alt="Background" class="background-image">
+
+        <div class="content">
+            <h1>Quản lý dễ dàng<br>Bán hàng đơn giản</h1>
+            <div class="support-text">
+                <p>Hỗ trợ đăng ký 1800 6162</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= RIGHT PANEL ================= -->
+    <div class="right-panel">
+        <div class="form-container">
+
+            <div class="close-button">&times;</div>
+            <h2>Tạo tài khoản dùng thử miễn phí</h2>
+
+            <!-- ================= FORM ================= -->
+            <form id="registerForm">
+
+                <!-- Họ tên -->
+                <div class="form-group">
+                    <input type="text" id="fullname" placeholder="Nhập họ tên" required>
+                </div>
+
+                <!-- Số điện thoại -->
+                <div class="form-group phone-group">
+                    <div class="country-select" id="phoneCountry">
+                        <img id="countryFlag" src="../flags/vn.svg" alt="VN">
+                        <span id="countryCode">+84</span>
+                        <div class="arrow">&#9662;</div>
+                    </div>
+                    <input type="tel" id="phone" placeholder="091 234 56 78" required>
+                </div>
+
+                <!-- Quốc gia đang kinh doanh -->
+                <div class="form-group">
+                    <div class="select-wrapper" id="businessCountry">
+                        <div class="select-selected">Quốc gia đang kinh doanh</div>
+                        <div class="arrow">&#9662;</div>
+                        <div class="select-items"></div>
+                    </div>
+                </div>
+
+                <!-- Khu vực -->
+                <div class="form-group">
+                    <select id="region" required>
+                        <option value="" disabled selected>Chọn khu vực</option>
+                    </select>
+                </div>
+
+                <!-- Captcha -->
+                <div class="form-group captcha-group">
+                    <div class="captcha-container">
+                        <div class="captcha" id="captcha">4373</div>
+                        <button type="button" id="refreshCaptcha">
+                            <img src="../picture/refresh-icon.png" alt="Refresh">
+                        </button>
+                    </div>
+                    <input type="text" id="captchaInput" placeholder="Nhập mã xác thực" required>
+                </div>
+
+                <!-- Điều khoản -->
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">
+                        Tôi đã đọc và đồng ý
+                        <a href="#">Điều khoản và chính sách sử dụng</a> của KiotViet
+                    </label>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Tiếp tục</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<script src="../Controller_js/dangky.js"></script>
+</body>
+</html>

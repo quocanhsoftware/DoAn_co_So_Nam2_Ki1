@@ -1,0 +1,194 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND + OVERLAY */
+body {
+    background: url('picture/background_login.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.85)
+    );
+    z-index: 0;
+}
+
+/* CONTENT OVERLAY LAYER */
+.login-container,
+.footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* -------- LOGIN BOX -------- */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 35px 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    margin-bottom: 25px;
+}
+.logo img {
+    height: 36px;
+}
+
+/* FORM INPUT */
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 340px;
+    padding: 14px 15px;
+    border: 1px solid #cdd6e1;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+input:focus {
+    border-color: #0088ff;
+    box-shadow: 0 0 0 3px rgba(0,136,255,0.2);
+    outline: none;
+}
+
+/* PASSWORD TOGGLE ICON */
+.password-group {
+    position: relative;
+}
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.toggle-password img {
+    width: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+/* REMEMBER + FORGOT */
+.form-check {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+.remember-me label {
+    margin-left: 8px;
+    color: #555;
+}
+.forgot-password {
+    color: #0088ff;
+    text-decoration: none;
+}
+
+/* BUTTONS */
+.action-buttons {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 14px 0;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease;
+}
+.btn-primary { background: #0088ff; }
+.btn-success { background: #00c853; }
+.btn:hover {
+    opacity: 0.9;
+}
+.btn i {
+    margin-right: 8px;
+}
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.support {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+}
+.language img {
+    width: 18px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .login-box {
+        max-width: 92%;
+        padding: 28px 25px;
+    }
+    .action-buttons {
+        flex-direction: column;
+    }
+}
